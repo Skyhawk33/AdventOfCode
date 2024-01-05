@@ -1,0 +1,21 @@
+<v p:0*2a;=list size;                     n(4"FRTH"(4"TOYS"                                         ;;
+         ;stack = [next values] [current values] dst_range src_range ln i;                          ;;
+         ;depth =      (n+4)+   (n+4-1) - 4      3         2         1  0;                          
+                                                                                                    
+ >          gk& 00g 01p v                                                      ;case2: Vi < src+ln < Vi+Si; 
+                >$ a, & v;read line;    ;Vi<src?;       ;Vi>ln?;               > O4P\-\O- 5P5P+ 7NL6NL 00g2+00p01g2+01p v
+   >                    >&& 01g:!#v  _  :3+P 3P- :0\`!] :3P \`]O3+P OO+4P`     | 0 RR+2R ;case3: src < Vi+Si < src+ln;  <
+    >$ 0g:01p :!|!:-1 <              !                |       |           !<   > 01g5+N \O1-L\5P+\L :3+L$:2+L$ 01g2-01p v
+   $^   .g00 <  > :P. ^              :          ;i--; >      #$O3+P OO+0`!#^_ ON 3P5+NL +O3+NL :2+L$ 2PO3+NL 01g2+01p v  
+   |`\0: -0'_^# `a: ~v#< 0    $k3 <  ^                 -2     <                ;case1: Vi < src < Vi+Si; <              <
+    ;\n\n = new map; >$                         00g v -2 $L-1: _ $                             v         ^ p:0+2g00+2 <
+   > \a*+              ^                            >        : ^     @,a.,a  N $$(4"IMTH"  D   <         
+    ;we have to read the first number;                                                              
+    ;of a new group by hand because  ;                                                              
+    ;we cant detect line breaks      ;                                                              
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    

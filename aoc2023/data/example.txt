@@ -1,0 +1,6 @@
+Place input files in this folder for days that require file input:
+day3.txt
+day10.txt
+day11.txt
+
+Other days use input through stdin
