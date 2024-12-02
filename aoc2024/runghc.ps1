@@ -1,0 +1,1 @@
+runghc ./day2.hs
