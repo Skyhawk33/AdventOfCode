@@ -1,11 +1,14 @@
+module Day1 (solve, path) where
+
 import Data.List (sort)
-import Data.Text as Text (Text, lines, unpack)
-import Data.Text.IO as Text (readFile)
 import Debug.Trace
 
-solve :: [String] -> String
-solve lines =
-  let (xs, ys) = unzip [(read x, read y) | (x : y : _) <- map words lines]
+path :: String
+path = "day1.txt"
+
+solve :: String -> String
+solve input =
+  let (xs, ys) = unzip [(read x, read y) | (x : y : _) <- map words (lines input)]
       sortedXs = sort xs
       sortedYs = sort ys
       part1 = sum [abs (x - y) | (x, y) <- zip sortedXs sortedYs]
@@ -24,9 +27,3 @@ similarity total counter p@(x : xs) q@(y : ys)
   | null xs = total + x * counter
   | head xs == x = similarity (total + x * counter) counter xs q
   | otherwise = similarity (total + x * counter) 0 xs q
-
-main :: IO ()
-main = do
-  textLines <- fmap Text.lines (Text.readFile "data/day1.txt")
-  let stringLines = map unpack textLines
-  putStrLn . solve $ stringLines

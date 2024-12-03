@@ -1,0 +1,33 @@
+cabal-version:      3.0
+name:               adventofcode
+version:            0.1.0.0
+author:             Skyhawk33
+maintainer:         df.skyhawk@gmail.com
+build-type:         Simple
+
+common warnings
+    -- ghc-options: -Wall
+
+executable aoc2024
+    import:           warnings
+    main-is:          Main.hs
+    hs-source-dirs:   aoc2024
+    default-language: Haskell2010
+    other-modules:
+        Day1,
+        Day2,
+        Day3,
+    -- other-extensions:
+    build-depends:
+        base ^>=4.17.2.1,
+        regex-tdfa ^>=1.3,
+
+executable aoc2023
+    import:           warnings
+    main-is:          Main.hs
+    hs-source-dirs:   aoc2023
+    default-language: Haskell2010
+    -- other-modules:
+    -- other-extensions:
+    build-depends:
+        base ^>=4.17.2.1

@@ -17,7 +17,7 @@ You will need Python 2.7 because the interpreter hasn't been updated since 2009.
 ## 2024
 This year I have been using Haskell, installed through [GHCup](https://www.haskell.org/ghcup/install/).
 
-individual solutions can be run using `runghc`.
+individual solutions can be run using `runghc`, or Main.hs can be run with `cabal run` for solutions with non-standard dependencies
 
 ### Useful links
 - [Learn You a Haskell for Great Good](https://learnyouahaskell.com/)

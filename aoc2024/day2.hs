@@ -1,11 +1,14 @@
-import Data.Text as Text (Text, lines, unpack)
-import Data.Text.IO as Text (readFile)
+module Day2 (solve, path) where
+
 import Debug.Trace (traceShow)
 
-solve :: [String] -> String
-solve lines =
-  let part1 = sum [1 | line <- lines, isSafe 0 (map read (words line))]
-      part2 = sum [1 | line <- lines, isSafe 1 (map read (words line))]
+path :: String
+path = "day2.txt"
+
+solve :: String -> String
+solve input =
+  let part1 = sum [1 | line <- lines input, isSafe 0 (map read (words line))]
+      part2 = sum [1 | line <- lines input, isSafe 1 (map read (words line))]
    in show part1 ++ "\n" ++ show part2
 
 isBetween x lower upper = lower < x && x < upper
@@ -34,9 +37,3 @@ isDecreasing mis x@(x0 : x1 : xs) =
   -- traceShow ("v" ++ show x ++ show mis)
   (x0 > x1 && isBetween (x0 - x1) 0 4 && isDecreasing mis (x1 : xs))
     || isDecreasing (mis - 1) (x0 : xs)
-
-main :: IO ()
-main = do
-  textLines <- fmap Text.lines (Text.readFile "data/day2.txt")
-  let stringLines = map unpack textLines
-  putStrLn . solve $ stringLines
